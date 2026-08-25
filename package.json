@@ -1,0 +1,30 @@
+{
+  "name": "mykala-store",
+  "version": "1.0.0",
+  "description": "MyKala — an Allbirds-style clothing store with UPI checkout, payment-screenshot verification and a full admin panel. Every product under ₹1000.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macvolz/MyKala-store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macvolz/MyKala-store/issues"
+  },
+  "homepage": "https://github.com/macvolz/MyKala-store#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.2.1",
+    "multer": "^2.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
