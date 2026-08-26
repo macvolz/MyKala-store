@@ -266,11 +266,14 @@ function addToCart(productId, size, qty) {
 }
 
 /* ---------- router ---------- */
-const routes = {
+/* Lazy lookup: viewLogin/viewSignup are `const` bindings declared below, so an
+   eagerly-evaluated object literal here would throw a ReferenceError (TDZ) at
+   script load and kill the whole SPA on GitHub Pages. */
+const routes = () => ({
   '/': viewHome, '/shop': viewShop, '/product': viewProduct, '/cart': viewCart,
   '/checkout': viewCheckout, '/login': viewLogin, '/signup': viewSignup,
   '/account': viewAccount, '/track': viewTrack, '/order-success': viewSuccess,
-};
+});
 
 function navigate(href, { replace = false } = {}) {
   const url = href.startsWith('http') ? href : withBase(href.startsWith('/') ? href : `/${href}`);
@@ -283,7 +286,8 @@ async function render() {
   const url = new URL(location.pathname + location.search, location.origin);
   const path = stripBase(url.pathname);
   const routeKey = path.split('/').slice(0, 2).join('/') || '/';
-  const view = routes[routeKey] || routes['/'];
+  const routeMap = routes();
+  const view = routeMap[routeKey] || routeMap['/'];
   $$('.main-nav a').forEach(a => {
     const href = stripBase(new URL(a.getAttribute('href'), location.origin).pathname);
     a.classList.toggle('active', href === path);
