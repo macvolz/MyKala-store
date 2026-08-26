@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyKala — Clothes that feel like nothing at all</title>
+  <meta name="description" content="MyKala — super soft, sustainable clothing under ₹1000. Organic cotton tees, hoodies, dresses and more." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%232E5E4E'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23FBF9F5' font-family='Arial' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Relative asset paths so the site works on GitHub Pages project URLs -->
+  <link rel="stylesheet" href="css/store.css" />
+</head>
+<body>
+  <div class="announce">Free shipping on orders over ₹999 · Easy 15-day returns</div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a href="/" class="logo" data-link>mykala<span class="logo-dot">.</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="/shop" data-link>Shop All</a>
+        <a href="/shop?cat=men" data-link>Men</a>
+        <a href="/shop?cat=women" data-link>Women</a>
+        <a href="/track" data-link>Track Order</a>
+      </nav>
+      <div class="header-actions">
+        <a href="/account" class="icon-link" id="accountLink" data-link aria-label="Account">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="/cart" class="icon-link cart-icon" data-link aria-label="Cart">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="view"></main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light" data-link>mykala<span class="logo-dot">.</span></a>
+        <p>Super soft, honestly priced clothing — everything under ₹1000. Made responsibly, worn everywhere.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="/shop" data-link>All Products</a>
+        <a href="/shop?cat=men" data-link>Men</a>
+        <a href="/shop?cat=women" data-link>Women</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="/track" data-link>Track Order</a>
+        <a href="/account" data-link>My Account</a>
+        <a href="/login" data-link>Login / Sign up</a>
+      </div>
+      <div class="footer-col">
+        <h4>We accept</h4>
+        <p class="upi-line">UPI · GPay · PhonePe · Paytm</p>
+        <p class="upi-line">Pay &amp; upload your screenshot at checkout — we verify every payment.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 MyKala Store · Crafted with care in India</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/store.js"></script>
+</body>
+</html>
