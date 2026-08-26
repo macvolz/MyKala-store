@@ -40,11 +40,25 @@ npm start
 
 The database (`data/mykala.db`) is created and seeded automatically with 8 demo products.
 
-## 🌐 Put it online (free / cheap hosting)
+## 🌐 Put it online
 
-The store is a single Node app — it runs anywhere Node 22 runs.
+### GitHub Pages (static storefront demo — free)
 
-**Render (easiest, ~$7/mo with a disk that keeps your orders & photos):**
+The static site lives in the **`docs/`** folder (a publishable copy of `public/`).
+
+1. Merge this branch to `main`
+2. In the GitHub repo go to **Settings → Pages**
+3. Under **Build and deployment**:
+   - **Source:** Deploy from a branch
+   - **Branch:** `main` → `/docs` → **Save**
+4. Site URL: **https://macvolz.github.io/MyKala-store/**
+
+The static site includes the full browse / cart / demo-checkout experience using `docs/data/catalog.json`. Live orders, admin, and UPI verification still need the Node server below.
+
+> When you change storefront files under `public/`, copy them into `docs/` (or re-run `cp -a public/. docs/ && cp docs/index.html docs/404.html`) before publishing.
+
+### Render (full app with SQLite + uploads, ~$7/mo)
+
 1. This repo already includes `render.yaml` — go to [render.com](https://render.com), sign in with GitHub
 2. **New + → Blueprint** → pick `macvolz/MyKala-store` → **Apply**
 3. In ~2 minutes you get a public URL like `https://mykala-store.onrender.com`, with your database and uploaded payment screenshots stored on a persistent disk
