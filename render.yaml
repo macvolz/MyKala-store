@@ -1,0 +1,21 @@
+# Deploy MyKala on Render (https://render.com)
+# 1. Push this repo to GitHub (already done)
+# 2. On Render: New + > Blueprint > pick this repo > Apply
+services:
+  - type: web
+    name: mykala-store
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.17.0
+      - key: DATA_DIR
+        value: /opt/render/mykala-data
+      - key: UPLOAD_DIR
+        value: /opt/render/mykala-data/uploads
+    disks:
+      - name: mykala-data
+        mountPath: /opt/render/mykala-data
+        sizeGB: 1
