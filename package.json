@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/macvolz/MyKala-store/issues"
   },
-  "homepage": "https://github.com/macvolz/MyKala-store#readme",
+  "homepage": "https://macvolz.github.io/MyKala-store/",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "express": "^5.2.1",

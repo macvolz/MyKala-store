@@ -1,0 +1,97 @@
+{
+  "settings": {
+    "upi_id": "mykala@upi",
+    "upi_name": "MyKala Store",
+    "store_note": "Pay securely via any UPI app (GPay, PhonePe, Paytm). Upload your payment screenshot and we will confirm your order after verifying the payment."
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "The Original Tee",
+      "category": "men",
+      "description": "Our signature tee made from 100% organic combed cotton. Pre-shrunk, breathable, and absurdly soft — it only gets better with every wash.",
+      "price": 799,
+      "image": "/images/products/tee-grey.jpg",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock": 40,
+      "featured": 1
+    },
+    {
+      "id": 2,
+      "name": "The All-Day Hoodie",
+      "category": "men",
+      "description": "A heavyweight fleece hoodie with a brushed interior, kangaroo pocket and ribbed cuffs. Warm enough for winter evenings, light enough for all day.",
+      "price": 999,
+      "image": "/images/products/hoodie-olive.jpg",
+      "sizes": ["S", "M", "L", "XL"],
+      "stock": 30,
+      "featured": 1
+    },
+    {
+      "id": 3,
+      "name": "The Relaxed Shirt",
+      "category": "men",
+      "description": "An easy, relaxed-fit button-up in a breathable cotton weave. Dress it up with chinos or wear it open over a tee — it works either way.",
+      "price": 899,
+      "image": "/images/products/shirt-sand.jpg",
+      "sizes": ["S", "M", "L", "XL"],
+      "stock": 25,
+      "featured": 0
+    },
+    {
+      "id": 4,
+      "name": "The Motion Jogger",
+      "category": "men",
+      "description": "Four-way stretch joggers with a drawstring waist, tapered leg and deep side pockets. Made for morning runs and lazy Sundays alike.",
+      "price": 849,
+      "image": "/images/products/jogger-charcoal.jpg",
+      "sizes": ["S", "M", "L", "XL"],
+      "stock": 35,
+      "featured": 0
+    },
+    {
+      "id": 5,
+      "name": "The CloudSoft Tee",
+      "category": "women",
+      "description": "A relaxed-fit women’s tee in our softest cotton jersey, with a flattering drape and drop shoulders. The one you’ll reach for every single week.",
+      "price": 699,
+      "image": "/images/products/tee-white.jpg",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "stock": 45,
+      "featured": 1
+    },
+    {
+      "id": 6,
+      "name": "The Breezy Dress",
+      "category": "women",
+      "description": "A flowy midi dress with short sleeves and side pockets (yes, real pockets). Light, airy, and endlessly wearable from brunch to sunset.",
+      "price": 949,
+      "image": "/images/products/dress-terracotta.jpg",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "stock": 20,
+      "featured": 1
+    },
+    {
+      "id": 7,
+      "name": "The Cozy Knit Sweater",
+      "category": "women",
+      "description": "A chunky-knit sweater with a slightly oversized fit and ribbed hem. Like wearing a warm hug, but make it fashion.",
+      "price": 999,
+      "image": "/images/products/sweater-cream.jpg",
+      "sizes": ["S", "M", "L", "XL"],
+      "stock": 22,
+      "featured": 0
+    },
+    {
+      "id": 8,
+      "name": "The Classic Denim Jacket",
+      "category": "unisex",
+      "description": "A timeless light-wash denim jacket with metal buttons and two chest pockets. The layer that finishes every outfit, season after season.",
+      "price": 999,
+      "image": "/images/products/denim-jacket.jpg",
+      "sizes": ["S", "M", "L", "XL"],
+      "stock": 18,
+      "featured": 1
+    }
+  ]
+}
