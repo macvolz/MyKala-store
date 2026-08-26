@@ -2,7 +2,7 @@
 
 An Allbirds-inspired clothing store — super soft, honestly priced essentials where **everything stays under ₹1000**.
 
-Built with **Node.js + Express + SQLite** (no build step — just run it).
+Built with **Node.js + Express + SQLite** (Node's built-in `node:sqlite` — zero native dependencies, no build step, just run it). Needs **Node 22.13+**.
 
 ## ✨ What's inside
 
@@ -40,6 +40,20 @@ npm start
 
 The database (`data/mykala.db`) is created and seeded automatically with 8 demo products.
 
+## 🌐 Put it online (free / cheap hosting)
+
+The store is a single Node app — it runs anywhere Node 22 runs.
+
+**Render (easiest, ~$7/mo with a disk that keeps your orders & photos):**
+1. This repo already includes `render.yaml` — go to [render.com](https://render.com), sign in with GitHub
+2. **New + → Blueprint** → pick `macvolz/MyKala-store` → **Apply**
+3. In ~2 minutes you get a public URL like `https://mykala-store.onrender.com`, with your database and uploaded payment screenshots stored on a persistent disk
+4. Attach a custom domain (e.g. `mykala.in`) from Render's dashboard → Settings → Custom Domains
+
+**Other options:** Railway, Fly.io, or any small VPS (`npm install && npm start`, then put nginx/caddy in front).
+
+> Note: free tiers (Render free etc.) have no persistent disk — orders/uploads reset on redeploy. Use a paid instance or a VPS for a real store.
+
 ## 🔑 Admin login
 
 ```
@@ -52,7 +66,7 @@ Password: admin123
 ### Change the admin password
 
 ```bash
-node -e "const b=require('bcryptjs'),d=require('better-sqlite3')('data/mykala.db');d.prepare('UPDATE users SET password_hash=? WHERE is_admin=1').run(b.hashSync('YOUR_NEW_PASSWORD',10))"
+node -e "const b=require('bcryptjs');const{DatabaseSync}=require('node:sqlite');new DatabaseSync('data/mykala.db').prepare('UPDATE users SET password_hash=? WHERE is_admin=1').run(b.hashSync('YOUR_NEW_PASSWORD',10))"
 ```
 
 ## 📁 Structure

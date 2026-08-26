@@ -20,11 +20,10 @@
   "homepage": "https://github.com/macvolz/MyKala-store#readme",
   "dependencies": {
     "bcryptjs": "^3.0.3",
-    "better-sqlite3": "^13.0.3",
     "express": "^5.2.1",
     "multer": "^2.2.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.13"
   }
 }

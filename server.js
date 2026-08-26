@@ -16,7 +16,7 @@ app.disable('x-powered-by');
 
 // ---------- static ----------
 app.use(express.static(path.join(__dirname, 'public')));
-const UPLOAD_DIR = path.join(__dirname, 'uploads');
+const UPLOAD_DIR = process.env.UPLOAD_DIR ? path.resolve(process.env.UPLOAD_DIR) : path.join(__dirname, 'uploads');
 for (const sub of ['products', 'payments']) {
   const d = path.join(UPLOAD_DIR, sub);
   if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
